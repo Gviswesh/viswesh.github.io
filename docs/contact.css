@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
 }
-/* This function is for dark mode */
 #icon{
     width: 30px;
     cursor: pointer;
 }
-body {
-    background: var(--primary-color);
+nav ul{
+    flex: 1;
+    text-align: right;
 }
 :root{
     --primary-color: #edf2fc;
@@ -18,25 +18,22 @@ body {
     --primary-color: #000106;
     --secondary-color: #fff;
 }
-/* This is for the navigation bar */
 .hero{
     height: 90vh;
-    width: 95%;
+    width: 100%;
     background: var(--primary-color); 
     font-family: sans-serif;
     position: relative;
 }
 nav{
-    width: 85%;
+    width: 84%;
     margin: auto;
-    /*margin: 10px 200px;*/
     padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
 }
-/* This is my logo*/
 .logo{
     width: 200px;
     cursor: pointer;
