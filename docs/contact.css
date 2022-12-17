@@ -122,5 +122,11 @@ a:hover .fa-envelope{
 a:hover .fa-discord{
     color: #4e5d94;
 }
-    
+.outer-footer{
+    padding: 50px;
+    text-align: left;
+    font-size: 12px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}    
    
