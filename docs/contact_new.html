@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Details</title>
+    <link rel="stylesheet" href="contact_new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head> 
+    <body>
+        <div class="hero">
+            <nav>
+                <img src="images/mylogo.png" class="logo">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <!-- <li><a href="about.html">ABOUT</a></li> 
+                    <i class="fa-solid fa-xmark"></i> -->
+                </ul>
+                <!-- <i class="fa-solid fa-bars"></i> -->
+              <img src="images/moon.png" id="icon">
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1>
+                            CONTACT ME
+                        </h1>
+                     <!-- <p>visweshsubramanian@outlook.com</p> -->
+                        <p><i class="fa-sharp fa-solid fa-phone"></i>+91 9962833064</p>
+                        <div class="social-icons">
+                            <a href="https://wa.me/919962833064"> <i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="mailto:visweshsubramanian@gmail.com"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+                            <a href="https://www.discord.com/channels/@holafundozz"><i class="fa-brands fa-discord"></i></a>
+                            <a href="https://t.me/holafundozz"><i class="fa-brands fa-telegram"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email ID" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ------- FROM YOUTUBE -->
+<!-- <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1>
+                    Contact Me
+                </h1>
+             <p>visweshsubramanian@outlook.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i>+91 9962833064</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/919962833064"> <i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:visweshsubramanian@gmail.com"><i class="fa-sharp fa-solid fa-envelope"></i></a>
+                    <a href="https://www.discord.com/channels/@holafundozz"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://t.me/holafundozz"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="content-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email ID" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+    </body>
+    <script>
+        var icon=document.getElementById("icon");
+        icon.onclick=function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src="images/sun.png";
+            }
+            else{
+                icon.src="images/moon.png";
+            }
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzgdYRpXOH6EvJH5DPGd2hHEPORUEaFMtqH6BRu5ve4PvrZhMu3hkSpulvsU3sL531-/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                <!-- msg.innerHTML="Message Sent Successfully" -->
+                alert("Message sent successfully")
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            } )
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    <footer>
+        <div class="outer-footer">
+            Copyright &copy; Viswesh G. All Rights Reserved
+            <br>Whatsapp Logo is trademark or registered trademark of the Whatsapp LLC in the U.S. and other countries
+            <br>Discord Logo is trademark or registered trademark of the Discord Inc in the U.S. and other countries
+            <br>Telegram Logo is trademark or registered trademark of the Telegram Messenger Inc in the U.K. and other countries
+        </div>
+    </footer>
+</html>
