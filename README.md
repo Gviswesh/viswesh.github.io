@@ -34,5 +34,5 @@ If you find any issues with the website or have suggestions for improvement, ple
 
 ## Contact
 
-You can reach me via email at [your.email@example.com](mailto:visweshsubramanian@hotmail.com) or contact me through the Contact column of my website
+You can reach me via email at [visweshsubramanian@hotmail.com](mailto:visweshsubramanian@hotmail.com) or contact me through the Contact column of my website
 
